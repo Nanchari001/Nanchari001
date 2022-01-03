@@ -17,6 +17,7 @@ export class AppComponent {
   constructor(
     private apiService: ApiService
   ) {
+    debugger;
     this.searchMeals();
   }
 
