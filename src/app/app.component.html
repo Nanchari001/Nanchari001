@@ -1,0 +1,69 @@
+<div class="main_content" style="background-color: #d7e2ff;">
+
+  <div class="row col-md-12 d-flex justify-content-center align-items-center">
+    <div class="col-md-8 content pt-3" *ngIf="mealResult.length > 0">
+      <img class="image_css" src="https://www.themealdb.com/images/media/meals/ustsqw1468250014.jpg" alt="pasta">
+    </div>
+  </div>
+
+
+  <div class="row col-md-12 d-flex justify-content-center align-items-center">
+
+    <div class="col-md-8 content" *ngIf="mealResult.length > 0">
+
+      <div class="my-4">
+        <p class="subHead">Meal :
+          <span class="data">{{mealResult[0].strMeal}}</span>
+        </p>
+      </div>
+
+      <div>
+        <p class="subHead">Ingredients:</p>
+        <ul>
+          <li *ngFor="let item of ingredient;">
+            {{item.name}} of
+            <span style="font-weight: 600;">
+              {{item.value}}
+            </span>
+          </li>
+        </ul>
+      </div>
+
+      <div>
+        <p class="subHead">Instructions :
+          <span class="data">{{mealResult[0].strInstructions}} </span>
+        </p>
+      </div>
+
+      <div>
+        <p class="subHead">Category :
+          <span class="data">{{mealResult[0].strCategory}}</span>
+        </p>
+      </div>
+
+      <div>
+        <p class="subHead">Area :
+          <span class="data">{{mealResult[0].strArea}} </span>
+        </p>
+      </div>
+
+
+      <div>
+        <p class="subHead">Tags :
+          <span class="data">{{mealResult[0].strTags}} </span>
+        </p>
+      </div>
+
+      <div>
+        <p class="subHead">YouTube Link :
+          <a [href]="mealResult[0].strYoutube"> click here</a>
+        </p>
+      </div>
+
+    </div>
+
+
+
+  </div>
+
+</div>
